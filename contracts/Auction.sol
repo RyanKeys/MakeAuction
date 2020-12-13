@@ -38,7 +38,7 @@ contract Auction {
     }
 
     //Handles accepting of bids, assigns new highest bidder, and emit a new bid event.
-    function placeBid() payable isNotOwner isNotEnded public {
+    function bid() payable isNotOwner isNotEnded public {
         require(msg.value > 0, "Your bid is too low.");
         require(msg.value > highestBid, "Your bid is too low.");
         if (bidderMapping[msg.sender] == 0) {
