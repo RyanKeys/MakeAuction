@@ -2,7 +2,6 @@ pragma solidity ^0.7.0;
 
 contract Auction {
 
-
     uint256 public endTime;
     address payable public owner;
     bool public auctionOver;
@@ -23,7 +22,6 @@ contract Auction {
         endTime = block.timestamp + _auctionDuration;
     }
 
-
     //must return true to continue on function path with modifiers.
     modifier isEnded {
         require(block.timestamp >= endTime, "The Auction is over.");
@@ -38,8 +36,6 @@ contract Auction {
         require(msg.sender != owner, "This is your auction!");
         _;
     }
-
-    
 
     //Handles accepting of bids, assigns new highest bidder, and emit a new bid event.
     function placeBid() payable isNotOwner isNotEnded public {
