@@ -1,3 +1,6 @@
+![CryptoZombies](https://github.com/RyanKeys/MakeAuction/blob/main/Screen%20Shot%202020-09-22%20at%207.12.31%20PM.png)
+
+
 # token-mix
 
 A bare-bones implementation of the Ethereum [ERC-20 standard](https://eips.ethereum.org/EIPS/eip-20), written in [Solidity](https://github.com/ethereum/solidity).
